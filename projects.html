@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ren (Ryan) Chen's Homepage</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+     <div class="brand">Ren (Ryan) Chen</div>
+    <div class="address-bar">FPGA/Parallel Computing Group at USC | Los Angeles, CA 90089</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">Ren (Ryan) Chen</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                     <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="research.html">Research</a>
+                    </li>
+                    <li>
+                        <a href="education.html">Education</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Project</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">About
+                        <strong>Sorting</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive img-border-left" src="img/arch_asum.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p align="justify">Parallel sorting networks are widely employed in hardware
+implementations for sorting due to their high data parallelism and low control overhead. We propose
+an energy and memory efficient mapping methodology for
+implementing bitonic sorting network on FPGA. Using this
+methodology, the proposed sorting architecture can be built
+for any given data parallelism and supports processing continuous data streams. 
+With a data parallelism of p, this design
+sorts an N-key sequence with a latency of ~6N/p, a
+throughput (# of keys sorted per cycle) of p and uses
+~6N memory. This achieves optimal memory efficiency
+(defined as the ratio of throughput to the amount of on-chip
+memory used by the design) compared with the state-of-the-art. </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+		<div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">About
+                        <strong>Permutation and Interconnection</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive img-border-left" src="img/spn.png" alt="">
+					<p> &nbsp </p>
+					<img class="img-responsive img-border-left" src="img/spn_design.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p align="justify">
+Permutation networks widely exist in various applications including digital signal processing,
+cryptography and network processing. 
+The interconnection complexity increases dramatically for permuting large
+data sets. For large data sets, a feasible solution is to build a
+hardware structure with a fixed data parallelism to permute the
+input streaming data. Therefore, we develop a novel design for
+such permutation networks by vertically "folding" the classic Clos network
+to realize a RAM-based Streaming Permutation Network
+(RAM-SPN). We prove that the proposed RAM-SPN maintains the
+rearrangebly non-blocking characteristic of the Clos network and
+is run-time reconfigurable to realize arbitrary permutations on
+streaming data. With a data parallelism of p, RAM-SPN permutes an
+N-element data sequence with latency N/p, throughput (# of
+data elements permuted per cycle) p and uses N memory.
+While sustaining the same throughput, our proposed RAM-SPN 
+consumes 4x less memory resource
+compared with the state-of-the-art.</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+		
+		
+		
+		<div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">About
+                        <strong>FFT</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive img-border-left" src="img/radix-4.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p align="justify">In this project, we revisit the classic Fast Fourier Transform (FFT) for energy efficient designs on FPGAs. A parameterized FFT architecture is proposed to identify the design trade-offs in achieving energy efficiency. We first perform design space exploration by varying the algorithm mapping parameters, such as the degree of vertical and horizontal parallelism, that characterize decomposition based FFT
+algorithms. Then we explore an energy efficient design by
+empirical selection on the values of the chosen architecture parameters, including the type of memory elements, the
+type of interconnection network and the number of pipeline
+stages. The trade offs between energy, area, and time are
+analyzed using two performance metrics: the energy efficiency (defined as the number of operations per Joule) and
+the Energy x Area x Time (EAT) composite metric. From the
+experimental results, a design space is generated to demonstrate the effect of these parameters on the various performance metrics. 
+For N-point FFT (16~1024), our
+designs achieve up to 28% and 38% improvement in the
+energy efficiency and EAT, respectively, compared with the
+state-of-the-art design. </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+		
+		
+		
+		<div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">About
+                        <strong>Coarse-grained reconfigurable array</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-responsive img-border-left" src="img/simulator.jpg" alt="">
+					<p>&nbsp</p>
+					  <img class="img-responsive img-border-left" src="img/trans_model.jpg" alt="">
+					  <p>&nbsp</p>
+					    <img class="img-responsive img-border-left" src="img/bus_model.jpg" alt="">
+                </div>
+                <div class="col-md-7">
+                    <p align="justify">
+   This project is a cycle-accurate reconfigurable system simulator based on the SimpleScalar simulator. The simulator is written in SystemC. 
+    As shown in the figure, the simulator core is composed of four parts:
+    Main Processor (SimpleScalar), Coarse-Grained Reconfigurable Array, Memory Module, AHB Bus.
+    Besides, to provides a friendly interface for users to debug, we also add several other modules: profiler, initializer, architecture parameter configuration, debugger, etc.
+   </p>&nbsp
+   <p>As is shown in the second figure, transaction modeling method in SystemC is adopted in this project for high level simulation.  </p>
+   &nbsp 
+   <p>
+   By transaction level modeling, we implemented the behavioral model of the bus and memory with interface method call, which greatly improved the expandability of the simulator.  
+   </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+		
+		
+		
+ <!--       <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Our
+                        <strong>Team</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <h3>John Smith
+                        <small>Job Title</small>
+                    </h3>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <h3>John Smith
+                        <small>Job Title</small>
+                    </h3>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <h3>John Smith
+                        <small>Job Title</small>
+                    </h3>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+-->
+    </div>
+    <!-- /.container -->
+
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>COPYRIGHT &copy 2015; DESIGN BY <a href="http://www.ironsummitmedia.com">IRON SUMMIT MEDIA</a></p>
+                </div>
+            </div>
+        </div>
+   
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

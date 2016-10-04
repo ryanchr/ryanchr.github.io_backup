@@ -1,0 +1,42 @@
+1. If you want to store the online users /visitors into a file on the server, use the files: "userson.txt", and "usersontxt.php". Copy them on your server, then give CHMOD 0766 (or 0777) permissions to "userson.txt".
+
+ - To include the script in a php file, add this code:
+
+            <?php include('usersontxt.php'); ?>
+
+ - To insert it in a html file, use this code:
+
+           <script type="text/javascript" src="usersontxt.php?uvon=showon"></script>
+
+
+------------------------------------------------------------------------------------------------
+
+
+2. To store the online users /visitors into a MySQL database, use the files: "create_userson.php", and "usersmysql.php".
+ - In both file you must add your personal data for connecting to MySQL database, in the variables: $host, $user, $pass, and $dbname .
+ - Then, copy them on your server, and run the "create_userson.php" on your browser to create the "userson" table.
+
+ - In the php file in which you want to display the online, add this code:
+
+            <?php include('usersmysql.php'); ?>
+
+
+ - If you want to insert it in a html file, use this code:
+
+           <script type="text/javascript" src="usersmysql.php?uvon=showon"></script>
+
+
+
+--------------------------------------------------------------------------------------
+
+
+
+Both scripts work with $_SESSION. At the begining of the PHP file in which you use it, you must add:   session_start(). As you can see in the "test.php" file.
+ - The "test.html", and "test.php" files are only for test, to see how these scripts are used.
+
+
+
+If you whish, visit http://coursesweb.net
+
+
+Respectfully, Marius
